@@ -11,6 +11,8 @@ npm install
 npm run dev
 ```
 
+Abra `http://localhost:3000` para acessar a vitrine. O catálogo e as categorias são carregados pela API; a sacola demonstrativa fica salva no armazenamento local do navegador. O checkout ainda não está implementado. A verificação da API está disponível em `GET /api/health`.
+
 ## Endpoints
 
 Todas as coleções abaixo aceitam `GET` para listar e `POST` para criar. Cada recurso também aceita `GET /:id`, `PUT /:id` e `DELETE /:id`.

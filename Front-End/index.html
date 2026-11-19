@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison Saint — Curadoria de Grifes &amp; Ateliê Próprio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#FFFFFF;
+    --porcelain:#F8FBFD;
+    --pale-blue:#E6F1FA;
+    --baby-blue:#A9CFE9;
+    --baby-blue-deep:#7FB2DA;
+    --navy:#16324E;
+    --navy-deep:#0B1E32;
+    --ink:#1C3348;
+    --line:rgba(22,50,78,0.14);
+    --serif:'Cormorant Garamond', serif;
+    --sans:'Jost', sans-serif;
+  }
+  *{margin:0; padding:0; box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--white) url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNjAiIGhlaWdodD0iMjYwIiB2aWV3Qm94PSIwIDAgMjYwIDI2MCI+CiAgPGcgc3Ryb2tlPSIjMTYzMjRFIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuMTAiPgogICAgPHBhdGggZD0iTS0xMCw2NCBRMjIsMzIgNTQsNjQgVDExOCw2NCBUMTgyLDY0IFQyNDYsNjQgVDMxMCw2NCIvPgogICAgPHBhdGggZD0iTS0xMCw2NCBRMjIsMzIgNTQsNjQgVDExOCw2NCBUMTgyLDY0IFQyNDYsNjQgVDMxMCw2NCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzIsMTMwKSIvPgogIDwvZz4KICA8ZyBzdHJva2U9IiMxNjMyNEUiIHN0cm9rZS13aWR0aD0iMC44IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjEyIj4KICAgIDxwYXRoIGQ9Ik0yMiw1MCBDMTQsNDQgMTQsMzYgMjIsMzAiLz4KICAgIDxwYXRoIGQ9Ik04Niw3OCBDOTQsODQgOTQsOTIgODYsOTgiLz4KICAgIDxwYXRoIGQ9Ik0xNTAsNTAgQzE0Miw0NCAxNDIsMzYgMTUwLDMwIi8+CiAgICA8cGF0aCBkPSJNMjE0LDc4IEMyMjIsODQgMjIyLDkyIDIxNCw5OCIvPgogICAgPHBhdGggZD0iTTU0LDE4MCBDNDYsMTc0IDQ2LDE2NiA1NCwxNjAiLz4KICAgIDxwYXRoIGQ9Ik0xMTgsMjA4IEMxMjYsMjE0IDEyNiwyMjIgMTE4LDIyOCIvPgogICAgPHBhdGggZD0iTTE4MiwxODAgQzE3NCwxNzQgMTc0LDE2NiAxODIsMTYwIi8+CiAgICA8cGF0aCBkPSJNMjQ2LDIwOCBDMjU0LDIxNCAyNTQsMjIyIDI0NiwyMjgiLz4KICA8L2c+CiAgPGcgc3Ryb2tlPSIjN0ZCMkRBIiBzdHJva2Utd2lkdGg9IjAuOSIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC4xOCI+CiAgICA8cGF0aCBkPSJNNTQsNjQgYy03LC01IC03LC0xMyAwLC0xOCBjNSw3IDUsMTEgMCwxOCBaIi8+CiAgICA8cGF0aCBkPSJNMTgyLDY0IGMtNywtNSAtNywtMTMgMCwtMTggYzUsNyA1LDExIDAsMTggWiIvPgogICAgPHBhdGggZD0iTTg2LDEzMCBjNywtNSA3LC0xMyAwLC0xOCBjLTUsNyAtNSwxMSAwLDE4IFoiLz4KICAgIDxwYXRoIGQ9Ik0yMTQsMTMwIGM3LC01IDcsLTEzIDAsLTE4IGMtNSw3IC01LDExIDAsMTggWiIvPgogICAgPHBhdGggZD0iTTExOCwxOTQgYy03LC01IC03LC0xMyAwLC0xOCBjNSw3IDUsMTEgMCwxOCBaIi8+CiAgICA8cGF0aCBkPSJNMjQ2LDE5NCBjLTcsLTUgLTcsLTEzIDAsLTE4IGM1LDcgNSwxMSAwLDE4IFoiLz4KICA8L2c+Cjwvc3ZnPg==");
+    background-repeat:repeat;
+    background-size:260px 260px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    position:relative;
+  }
+  header, main, footer{ position:relative; z-index:1; }
+  img,svg{display:block; max-width:100%; height:auto;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  .wrap{max-width:1240px; margin:0 auto; padding:0 40px;}
+  section{position:relative;}
+
+  ::selection{background:var(--baby-blue); color:var(--navy-deep);}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .9s cubic-bezier(.16,.8,.24,1), transform .9s cubic-bezier(.16,.8,.24,1);}
+  .reveal.is-visible{opacity:1; transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important;}
+  }
+
+  /* ================= TIDE LINE (signature motif) ================= */
+  .tide{
+    position:relative;
+    width:100%;
+    height:26px;
+    overflow:hidden;
+    line-height:0;
+  }
+  .tide svg{
+    position:absolute;
+    top:0; left:-10%;
+    width:120%;
+    height:100%;
+  }
+  .tide .line-a{ animation:tideA 11s ease-in-out infinite; }
+  .tide .line-b{ animation:tideB 13s ease-in-out infinite; }
+  @keyframes tideA{
+    0%{ transform:translateX(0); }
+    50%{ transform:translateX(-46px); }
+    100%{ transform:translateX(0); }
+  }
+  @keyframes tideB{
+    0%{ transform:translateX(-18px); }
+    50%{ transform:translateX(28px); }
+    100%{ transform:translateX(-18px); }
+  }
+
+  /* ================= HEADER ================= */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(255,255,255,0.86);
+    backdrop-filter:blur(14px);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:26px 40px 20px;
+    max-width:1240px; margin:0 auto;
+  }
+  .nav-links{
+    display:flex; gap:34px;
+    font-size:12.5px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--navy);
+  }
+  .nav-links a{ position:relative; padding-bottom:4px; opacity:.82; transition:opacity .25s ease; }
+  .nav-links a:hover{ opacity:1; }
+  .nav-links a::after{
+    content:''; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--baby-blue-deep);
+    transition:width .3s ease;
+  }
+  .nav-links a:hover::after{ width:100%; }
+
+  .logo{
+    font-family:var(--serif);
+    font-size:28px;
+    letter-spacing:.16em;
+    color:var(--navy-deep);
+    text-align:center;
+    white-space:nowrap;
+  }
+  .logo .maison{ display:block; font-size:10px; font-family:var(--sans); letter-spacing:.4em; color:var(--baby-blue-deep); margin-bottom:2px; text-transform:uppercase; font-weight:500;}
+
+  .nav-icons{ display:flex; gap:20px; align-items:center; }
+  .nav-icons a{opacity:.75; transition:opacity .25s ease;}
+  .nav-icons a:hover{opacity:1;}
+  .nav-burger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none;}
+  .nav-burger span{width:22px; height:1px; background:var(--navy);}
+
+  /* ================= HERO ================= */
+  .hero{
+    padding:64px 0 0;
+    background:transparent;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:40px;
+    align-items:center;
+    max-width:1240px; margin:0 auto; padding:0 40px;
+  }
+  .eyebrow{
+    font-size:11.5px; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--baby-blue-deep); font-weight:600; margin-bottom:22px;
+    display:flex; align-items:center; gap:14px;
+  }
+  .eyebrow::before{content:''; width:34px; height:1px; background:var(--baby-blue-deep);}
+  h1.hero-title{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(42px, 5.4vw, 74px);
+    line-height:1.06;
+    color:var(--navy-deep);
+    letter-spacing:-0.01em;
+    margin-bottom:28px;
+  }
+  h1.hero-title em{ font-style:italic; color:var(--baby-blue-deep); font-weight:400; }
+  .hero-desc{
+    font-size:17px; line-height:1.85; color:var(--ink); opacity:.82;
+    max-width:440px; margin-bottom:40px; font-weight:300;
+  }
+  .hero-center{
+    max-width:760px; margin:0 auto; padding:0 40px; text-align:center;
+  }
+  .hero-center .eyebrow{ justify-content:center; }
+  .hero-center .hero-desc{ margin-left:auto; margin-right:auto; }
+  .cta-row{ display:flex; gap:18px; align-items:center; flex-wrap:wrap; justify-content:center; }
+  .btn{
+    font-family:var(--sans); font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+    padding:16px 34px; border-radius:2px; font-weight:500;
+    transition:all .3s ease; display:inline-block; border:1px solid var(--navy);
+  }
+  .btn-solid{ background:var(--navy); color:var(--white); }
+  .btn-solid:hover{ background:var(--navy-deep); border-color:var(--navy-deep); }
+  .btn-line{ color:var(--navy); }
+  .btn-line:hover{ background:var(--navy); color:var(--white); }
+
+  .hero-art{ position:relative; display:flex; align-items:center; justify-content:center; }
+  .vase-float{ animation:float 7s ease-in-out infinite; }
+  @keyframes float{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(-14px);} }
+
+  /* ================= MARQUEE ================= */
+  .marquee-band{
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    padding:22px 0; margin-top:70px; overflow:hidden; background:rgba(248,251,253,0.55);
+  }
+  .marquee-track{
+    display:flex; gap:56px; white-space:nowrap;
+    animation:marquee 34s linear infinite;
+    width:max-content;
+  }
+  .marquee-track span{
+    font-family:var(--serif); font-style:italic; font-size:20px; color:var(--navy);
+    opacity:.55; display:flex; align-items:center; gap:56px;
+  }
+  .marquee-track span::after{ content:'·'; color:var(--baby-blue-deep); font-style:normal; opacity:.9; }
+  @keyframes marquee{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+  /* ================= SECTION HEADERS ================= */
+  .section-pad{ padding:120px 0; }
+  .section-head{ max-width:640px; margin-bottom:64px; }
+  .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+  h2.section-title{
+    font-family:var(--serif); font-weight:400; font-size:clamp(32px,4vw,48px);
+    color:var(--navy-deep); line-height:1.1; letter-spacing:-0.01em;
+  }
+  h2.section-title em{ font-style:italic; color:var(--baby-blue-deep); }
+  .section-sub{ font-size:15.5px; color:var(--ink); opacity:.75; margin-top:18px; line-height:1.8; font-weight:300; }
+
+  /* ================= A CASA (about) ================= */
+  .about{ background:transparent; }
+  .about-grid{
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:80px; align-items:center;
+  }
+  .medallion{
+    width:100%; max-width:380px; margin:0 auto; position:relative;
+  }
+  .about-text p{
+    font-size:16px; line-height:1.95; color:var(--ink); opacity:.85; font-weight:300; margin-bottom:20px;
+    max-width:480px;
+  }
+  .about-text p:first-child{
+    font-family:var(--serif); font-size:24px; font-style:italic; color:var(--navy); opacity:1; line-height:1.5;
+    margin-bottom:28px;
+  }
+  .stat-row{ display:flex; gap:56px; margin-top:44px; }
+  .stat b{ font-family:var(--serif); font-size:34px; color:var(--navy-deep); font-weight:500; display:block; }
+  .stat span{ font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink); opacity:.6; }
+
+  /* ================= GRIFES (curated brands) ================= */
+  .grifes{ background:rgba(248,251,253,0.5); }
+  .grife-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line);
+  }
+  .grife-card{
+    background:rgba(248,251,253,0.92); padding:52px 40px; text-align:center;
+    transition:background .35s ease;
+  }
+  .grife-card:hover{ background:var(--white); }
+  .grife-card .mark{
+    font-family:var(--serif); font-size:26px; color:var(--navy-deep); letter-spacing:.02em; margin-bottom:12px;
+  }
+  .grife-card .desc{ font-size:13px; color:var(--ink); opacity:.65; line-height:1.7; font-weight:300; }
+  .grife-card .origin{
+    display:block; margin-top:16px; font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--baby-blue-deep);
+  }
+
+  /* ================= COLEÇÃO (own line) ================= */
+  .collection{ background:transparent; }
+  .product-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:34px;
+  }
+  .product-card{ position:relative; }
+  .product-frame{
+    background:var(--pale-blue); border-radius:2px; aspect-ratio:3/4; position:relative; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:20px;
+  }
+  .product-frame svg{ width:62%; height:62%; }
+  .product-frame .tag{
+    position:absolute; top:16px; left:16px; font-size:10px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--navy); background:var(--white); padding:6px 12px; opacity:.9;
+  }
+  .product-name{ font-family:var(--serif); font-size:21px; color:var(--navy-deep); margin-bottom:4px; }
+  .product-meta{ display:flex; justify-content:space-between; align-items:center; }
+  .product-price{ font-size:13.5px; color:var(--ink); opacity:.7; }
+  .product-link{ font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--baby-blue-deep); border-bottom:1px solid transparent; transition:border-color .3s ease; }
+  .product-card:hover .product-link{ border-color:var(--baby-blue-deep); }
+  .catalog-tools{display:flex; gap:14px; margin:-34px 0 42px; flex-wrap:wrap;}
+  .catalog-tools input,.catalog-tools select{
+    min-width:220px; padding:13px 15px; border:1px solid var(--line); background:rgba(255,255,255,.82);
+    color:var(--navy); font:400 14px var(--sans); outline-color:var(--baby-blue-deep);
+  }
+  .catalog-status{grid-column:1/-1; padding:28px 0; color:var(--ink); opacity:.75; line-height:1.6;}
+  .catalog-status[data-state="error"]{color:#8b2e2e; opacity:1;}
+  .product-frame img{width:100%; height:100%; object-fit:cover;}
+  .product-placeholder{font-family:var(--serif); color:var(--navy); opacity:.65; font-size:18px; text-align:center; padding:24px;}
+  .product-details{font-size:12px; color:var(--ink); opacity:.7; margin-top:9px; line-height:1.6;}
+  .product-add{
+    margin-top:14px; width:100%; border:1px solid var(--navy); background:var(--navy); color:var(--white);
+    padding:12px 16px; font:500 11px var(--sans); letter-spacing:.12em; text-transform:uppercase; cursor:pointer;
+    transition:background .25s ease;
+  }
+  .product-add:hover:not(:disabled){background:var(--navy-deep);}
+  .product-add:disabled{opacity:.5; cursor:not-allowed;}
+  .nav-cart{
+    border:0; background:none; color:var(--navy); cursor:pointer; display:flex; align-items:center; gap:6px;
+    font:400 12px var(--sans);
+  }
+  .cart-count{min-width:18px; height:18px; padding:0 5px; border-radius:50%; background:var(--pale-blue); display:inline-flex; align-items:center; justify-content:center;}
+  .cart-dialog{width:min(520px,calc(100% - 32px)); max-height:80vh; margin:auto; padding:30px; border:1px solid var(--line); color:var(--ink); background:var(--white);}
+  .cart-dialog::backdrop{background:rgba(11,30,50,.48);}
+  .cart-dialog h2{font:400 32px var(--serif); color:var(--navy-deep); margin-bottom:18px;}
+  .cart-line{display:grid; grid-template-columns:1fr auto; gap:12px; padding:14px 0; border-bottom:1px solid var(--line);}
+  .cart-line-name{font-family:var(--serif); font-size:19px;}
+  .cart-line-meta{font-size:12px; opacity:.72; margin-top:4px;}
+  .cart-line button,.cart-close{border:0; background:none; color:var(--navy); cursor:pointer; text-decoration:underline;}
+  .cart-total{display:flex; justify-content:space-between; margin:20px 0; font-weight:500;}
+  .cart-note{font-size:12px; line-height:1.6; opacity:.7;}
+  .cart-close{margin-top:20px; padding:10px 0;}
+
+  /* ================= ATELIER band ================= */
+  .atelier{
+    background:var(--navy-deep); color:var(--white); position:relative; overflow:hidden;
+  }
+  .atelier::before{
+    content:''; position:absolute; inset:0; opacity:.08;
+    background-image:radial-gradient(circle at 20% 30%, var(--baby-blue) 0, transparent 40%),
+                      radial-gradient(circle at 85% 70%, var(--baby-blue) 0, transparent 45%);
+  }
+  .atelier-inner{ position:relative; text-align:center; max-width:760px; margin:0 auto; }
+  .atelier .eyebrow{ justify-content:center; color:var(--baby-blue); }
+  .atelier .eyebrow::before{ background:var(--baby-blue); }
+  .atelier blockquote{
+    font-family:var(--serif); font-style:italic; font-weight:400;
+    font-size:clamp(26px,3.4vw,38px); line-height:1.5; color:var(--white); margin:26px 0 60px;
+  }
+  .process{ display:grid; grid-template-columns:repeat(3,1fr); gap:44px; text-align:left; }
+  .process-step .n{
+    font-family:var(--serif); font-size:15px; color:var(--baby-blue); opacity:.8; margin-bottom:10px; font-style:italic;
+  }
+  .process-step h4{ font-family:var(--serif); font-weight:500; font-size:21px; margin-bottom:10px; }
+  .process-step p{ font-size:13.5px; line-height:1.75; opacity:.68; font-weight:300; }
+
+  /* ================= NEWSLETTER ================= */
+  .newsletter{ background:rgba(230,241,250,0.6); text-align:center; }
+  .newsletter .section-head{ margin-bottom:38px; }
+  .nl-form{
+    display:flex; max-width:460px; margin:0 auto; border-bottom:1px solid var(--navy); padding-bottom:12px;
+  }
+  .nl-form input{
+    flex:1; border:none; background:transparent; font-family:var(--sans); font-size:14px; color:var(--navy);
+    outline:none; padding:6px 4px; font-weight:300;
+  }
+  .nl-form input::placeholder{ color:var(--navy); opacity:.5; }
+  .nl-form button{
+    background:none; border:none; font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--navy); cursor:pointer; font-weight:500;
+  }
+
+  /* ================= FOOTER ================= */
+  footer{ background:var(--navy-deep); color:var(--white); }
+  .footer-tide{ transform:scaleY(-1); }
+  .footer-grid{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:48px;
+    padding:76px 0 56px;
+  }
+  .footer-brand .logo{ color:var(--white); text-align:left; margin-bottom:18px; }
+  .footer-brand .logo .maison{ color:var(--baby-blue); }
+  .footer-brand p{ font-size:13.5px; line-height:1.8; opacity:.62; max-width:280px; font-weight:300; }
+  .footer-col h5{ font-size:11px; letter-spacing:.14em; text-transform:uppercase; opacity:.55; margin-bottom:20px; font-weight:500; }
+  .footer-col a{ display:block; font-size:14px; opacity:.78; margin-bottom:12px; font-weight:300; transition:opacity .25s ease; }
+  .footer-col a:hover{ opacity:1; }
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.12);
+    padding:26px 0; display:flex; justify-content:space-between; align-items:center;
+    font-size:12px; opacity:.5; font-weight:300;
+  }
+  .footer-social{ display:flex; gap:16px; }
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width:900px){
+    .nav-links{ display:none; }
+    .nav-burger{ display:flex; }
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero-art{ order:-1; max-width:200px; margin:0 auto -10px; }
+    .about-grid{ grid-template-columns:1fr; gap:44px; }
+    .grife-grid{ grid-template-columns:1fr; }
+    .product-grid{ grid-template-columns:1fr 1fr; }
+    .process{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:560px){
+    .wrap, .nav-row, .hero-grid{ padding-left:22px; padding-right:22px; }
+    .section-pad{ padding:80px 0; }
+    .product-grid{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns:1fr; }
+    .stat-row{ gap:34px; }
+  }
+</style>
+</head>
+<body>
+<!-- ============================================================ HEADER ============================================================ -->
+<header>
+  <div class="nav-row">
+    <nav class="nav-links">
+      <a href="#colecao">Coleção</a>
+      <a href="#grifes">Grifes</a>
+      <a href="#atelier">Ateliê</a>
+    </nav>
+    <a href="#top" class="logo"><span class="maison">Maison</span>Saint</a>
+    <div class="nav-icons">
+      <a href="#colecao" aria-label="Buscar produtos">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </a>
+      <button class="nav-cart" type="button" aria-label="Abrir sacola">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>
+        <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+      </button>
+      <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="tide" aria-hidden="true">
+    <svg class="line-a" viewBox="0 0 1400 26" preserveAspectRatio="none">
+      <path d="M-100,14 C50,2 150,26 300,14 C450,2 550,26 700,14 C850,2 950,26 1100,14 C1250,2 1350,26 1500,14" fill="none" stroke="#16324E" stroke-width="1" opacity="0.55"/>
+    </svg>
+    <svg class="line-b" viewBox="0 0 1400 26" preserveAspectRatio="none">
+      <path d="M-100,18 C60,30 140,4 320,18 C480,30 560,4 720,18 C880,30 960,4 1120,18 C1280,30 1360,4 1500,18" fill="none" stroke="#A9CFE9" stroke-width="1.2" opacity="0.8"/>
+    </svg>
+  </div>
+</header>
+
+<!-- ============================================================ HERO ============================================================ -->
+<main id="top">
+<section class="hero">
+  <div class="hero-center">
+      <p class="eyebrow">Curadoria &amp; Ateliê Próprio</p>
+      <h1 class="hero-title">A elegância<br>não se <em>apressa</em>.</h1>
+      <p class="hero-desc">Maison Saint reúne, sob um mesmo teto, as grifes mais desejadas do mundo e uma coleção própria nascida em ateliê — cada peça escolhida, cada peça costurada, com a mesma exigência.</p>
+      <div class="cta-row">
+        <a href="#colecao" class="btn btn-solid">Ver Coleção</a>
+        <a href="#grifes" class="btn btn-line">Grifes Selecionadas</a>
+      </div>
+  </div>
+
+  <div class="marquee-band" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Lumière de Seine</span><span>Rivage</span><span>Casa Dorotheia</span><span>Villanova</span><span>Verre &amp; Or</span><span>Maison Élodie</span>
+      <span>Lumière de Seine</span><span>Rivage</span><span>Casa Dorotheia</span><span>Villanova</span><span>Verre &amp; Or</span><span>Maison Élodie</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ A CASA ============================================================ -->
+<section class="about section-pad">
+  <div class="wrap about-grid">
+    <div class="medallion reveal">
+      <svg width="100%" height="100%" viewBox="0 0 380 380" fill="none">
+        <circle cx="190" cy="190" r="170" stroke="#A9CFE9" stroke-width="1"/>
+        <circle cx="190" cy="190" r="150" stroke="#16324E" stroke-width="0.8" opacity="0.5"/>
+        <g stroke="#16324E" stroke-width="1" fill="none" opacity="0.85">
+          <path d="M190 130 C190 190 190 250 190 270"/>
+          <path d="M190 170 C170 158 152 162 140 148"/>
+          <path d="M190 170 C210 158 228 162 240 148"/>
+          <path d="M190 210 C168 202 148 212 132 200"/>
+          <path d="M190 210 C212 202 232 212 248 200"/>
+          <ellipse cx="132" cy="196" rx="10" ry="6" transform="rotate(-24 132 196)"/>
+          <ellipse cx="248" cy="196" rx="10" ry="6" transform="rotate(24 248 196)"/>
+          <ellipse cx="140" cy="144" rx="9" ry="5.5" transform="rotate(-20 140 144)"/>
+          <ellipse cx="240" cy="144" rx="9" ry="5.5" transform="rotate(20 240 144)"/>
+        </g>
+        <g stroke="#7FB2DA" stroke-width="0.9" fill="none">
+          <circle cx="190" cy="118" r="5"/>
+          <path d="M190 108 C186 100 186 94 190 88 C194 94 194 100 190 108 Z"/>
+          <path d="M178 112 C170 106 166 100 168 92 C176 94 182 100 182 108 Z"/>
+          <path d="M202 112 C210 106 214 100 212 92 C204 94 198 100 198 108 Z"/>
+        </g>
+      </svg>
+    </div>
+    <div class="about-text reveal">
+      <p>“Nem tudo o que é raro precisa ser ruidoso.”</p>
+      <p>A Maison Saint nasceu de uma convicção simples: uma casa de moda não precisa escolher entre curar o melhor do mundo e criar o seu próprio. Selecionamos grifes que compartilham nosso apreço por técnica e permanência — e, em paralelo, desenhamos e confeccionamos peças autorais em nosso próprio ateliê.</p>
+      <p>O resultado é um guarda-roupa onde herança internacional e manufatura própria convivem na mesma prateleira, com o mesmo padrão de exigência.</p>
+      <div class="stat-row">
+        <div class="stat"><b>1998</b><span>Fundação</span></div>
+        <div class="stat"><b>14</b><span>Grifes Curadas</span></div>
+        <div class="stat"><b>100%</b><span>Confecção Própria</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ GRIFES ============================================================ -->
+<section class="grifes section-pad" id="grifes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Curadoria Internacional</p>
+      <h2 class="section-title">Grifes que <em>escolhemos</em>, uma a uma</h2>
+      <p class="section-sub">Nenhuma marca entra no nosso portfólio por volume ou tendência. Cada grife selecionada passou por um critério único: permanecer relevante daqui a vinte anos.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="grife-grid reveal">
+      <div class="grife-card"><div class="mark">Lumière de Seine</div><div class="desc">Alfaiataria francesa em corte impecável, herdeira dos ateliês parisienses do pós-guerra.</div><span class="origin">Paris, França</span></div>
+      <div class="grife-card"><div class="mark">Rivage</div><div class="desc">Malharia costeira, tecidos naturais e uma paleta que nunca sai do azul do mar.</div><span class="origin">Amalfi, Itália</span></div>
+      <div class="grife-card"><div class="mark">Casa Dorotheia</div><div class="desc">Bordados manuais e silhuetas arquitetônicas, feitos por uma só família há três gerações.</div><span class="origin">Porto, Portugal</span></div>
+      <div class="grife-card"><div class="mark">Villanova</div><div class="desc">Couro vegetal e ferragens desenhadas sob medida para cada coleção.</div><span class="origin">Florença, Itália</span></div>
+      <div class="grife-card"><div class="mark">Verre &amp; Or</div><div class="desc">Joalheria discreta, peças pensadas para durar mais que uma estação.</div><span class="origin">Genebra, Suíça</span></div>
+      <div class="grife-card"><div class="mark">Maison Élodie</div><div class="desc">Alta-costura sob encomenda, com atendimento por hora marcada.</div><span class="origin">Bruxelas, Bélgica</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ COLEÇÃO PRÓPRIA ============================================================ -->
+<section class="collection section-pad" id="colecao">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Ateliê Maison Saint</p>
+      <h2 class="section-title">A coleção <em>própria</em>, peça por peça</h2>
+      <p class="section-sub">Desenhada, cortada e costurada em nosso ateliê. Cada peça leva o nome de um lugar ou de um gesto do mar — a mesma inspiração que atravessa toda a casa.</p>
+    </div>
+
+    <div class="catalog-tools">
+      <input id="product-search" type="search" placeholder="Buscar uma peça" aria-label="Buscar produtos">
+      <select id="category-filter" aria-label="Filtrar por categoria">
+        <option value="">Todas as categorias</option>
+      </select>
+    </div>
+    <p class="catalog-status" id="catalog-status" role="status">Carregando produtos...</p>
+    <div class="product-grid" id="product-grid" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ============================================================ ATELIER ============================================================ -->
+<section class="atelier section-pad" id="atelier">
+  <div class="wrap atelier-inner reveal">
+    <p class="eyebrow">Do desenho à entrega</p>
+    <blockquote>“Uma peça bem feita não grita — ela apenas dura mais que as outras.”</blockquote>
+    <div class="process">
+      <div class="process-step">
+        <div class="n">Um</div>
+        <h4>Curadoria</h4>
+        <p>Cada tecido, aviamento e referência é avaliado pelo nosso time antes de virar peça — ou entrar em nosso portfólio de grifes.</p>
+      </div>
+      <div class="process-step">
+        <div class="n">Dois</div>
+        <h4>Confecção</h4>
+        <p>Peças próprias nascem no ateliê Maison Saint, com corte e acabamento manual revisados por uma segunda costureira.</p>
+      </div>
+      <div class="process-step">
+        <div class="n">Três</div>
+        <h4>Entrega</h4>
+        <p>Embalagem em tecido reutilizável, com certificado de autenticidade para peças de ateliê e grifes parceiras.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ NEWSLETTER ============================================================ -->
+<section class="newsletter section-pad">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center;">Correspondência Maison Saint</p>
+      <h2 class="section-title">Receba antes de <em>todo mundo</em></h2>
+      <p class="section-sub">Pré-vendas de coleção própria, convites para provas privadas e novidades de grifes curadas — sem ruído, poucas vezes por mês.</p>
+    </div>
+    <form class="nl-form reveal" onsubmit="event.preventDefault();">
+      <input type="email" placeholder="Seu melhor e-mail" required>
+      <button type="submit">Inscrever-se →</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============================================================ FOOTER ============================================================ -->
+<footer>
+  <div class="tide footer-tide" aria-hidden="true">
+    <svg class="line-a" viewBox="0 0 1400 26" preserveAspectRatio="none">
+      <path d="M-100,14 C50,2 150,26 300,14 C450,2 550,26 700,14 C850,2 950,26 1100,14 C1250,2 1350,26 1500,14" fill="none" stroke="#A9CFE9" stroke-width="1" opacity="0.6"/>
+    </svg>
+    <svg class="line-b" viewBox="0 0 1400 26" preserveAspectRatio="none">
+      <path d="M-100,18 C60,30 140,4 320,18 C480,30 560,4 720,18 C880,30 960,4 1120,18 C1280,30 1360,4 1500,18" fill="none" stroke="#7FB2DA" stroke-width="1" opacity="0.5"/>
+    </svg>
+  </div>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="#top" class="logo"><span class="maison">Maison</span>Saint</a>
+      <p>Curadoria de grifes internacionais e coleção própria confeccionada em ateliê. Elegância que não se apressa.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Explorar</h5>
+      <a href="#colecao">Coleção Própria</a>
+      <a href="#grifes">Grifes Selecionadas</a>
+      <a href="#atelier">Ateliê</a>
+    </div>
+    <div class="footer-col">
+      <h5>Atendimento</h5>
+      <a href="#">Trocas &amp; Devoluções</a>
+      <a href="#">Prova Privada</a>
+      <a href="#">Fale Conosco</a>
+    </div>
+    <div class="footer-col">
+      <h5>Siga</h5>
+      <a href="#">Instagram</a>
+      <a href="#">Pinterest</a>
+      <a href="#">WhatsApp</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Maison Saint. Todos os direitos reservados.</span>
+    <span>Feito com ofício, em ateliê.</span>
+  </div>
+</footer>
+
+<dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+  <h2 id="cart-title">Sua sacola</h2>
+  <div id="cart-items"></div>
+  <div class="cart-total"><span>Total</span><span id="cart-total">R$ 0,00</span></div>
+  <p class="cart-note">A sacola fica salva neste navegador. O checkout e a criação de pedidos ainda não estão disponíveis.</p>
+  <button class="cart-close" id="cart-close" type="button">Continuar comprando</button>
+</dialog>
+
+<script>
+  // scroll reveal
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.15});
+  els.forEach(el=>io.observe(el));
+
+  // mobile menu (simple toggle placeholder)
+  const burger = document.querySelector('.nav-burger');
+  const links = document.querySelector('.nav-links');
+  if(burger){
+    burger.addEventListener('click', ()=>{
+      const open = links.style.display === 'flex';
+      links.style.display = open ? 'none' : 'flex';
+      if (!open) {
+        links.style.cssText = 'display:flex; position:absolute; top:100%; left:0; right:0; background:#fff; flex-direction:column; padding:24px 40px; gap:18px; border-bottom:1px solid rgba(22,50,78,0.1);';
+      } else {
+        links.removeAttribute('style');
+      }
+    });
+  }
+
+  const productGrid = document.querySelector('#product-grid');
+  const catalogStatus = document.querySelector('#catalog-status');
+  const categoryFilter = document.querySelector('#category-filter');
+  const productSearch = document.querySelector('#product-search');
+  const cartCount = document.querySelector('#cart-count');
+  const cartDialog = document.querySelector('#cart-dialog');
+  const cartItems = document.querySelector('#cart-items');
+  const cartTotal = document.querySelector('#cart-total');
+  const CART_KEY = 'ecofashion-sacola';
+  let products = [];
+  let categories = [];
+  let cart = readCart();
+
+  function readCart() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(CART_KEY) || '[]');
+      return Array.isArray(saved) ? saved.filter(item =>
+        Number.isInteger(item.id_produto) && typeof item.nome === 'string'
+        && Number.isFinite(item.preco) && Number.isInteger(item.quantidade)
+        && item.quantidade > 0
+      ) : [];
+    } catch (error) {
+      console.error('Não foi possível carregar a sacola salva.', error);
+      return [];
+    }
+  }
+
+  function money(value) {
+    return Number(value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  }
+
+  function showCatalogMessage(message, state) {
+    catalogStatus.textContent = message;
+    catalogStatus.dataset.state = state || 'info';
+    catalogStatus.hidden = false;
+  }
+
+  function addImageOrPlaceholder(frame, product) {
+    if (typeof product.imagem_url === 'string' && product.imagem_url.trim()) {
+      try {
+        const imageUrl = new URL(product.imagem_url, window.location.origin);
+        if (imageUrl.protocol === 'http:' || imageUrl.protocol === 'https:') {
+          const image = document.createElement('img');
+          image.src = imageUrl.href;
+          image.alt = product.nome;
+          image.loading = 'lazy';
+          image.addEventListener('error', () => {
+            image.remove();
+            const placeholder = document.createElement('span');
+            placeholder.className = 'product-placeholder';
+            placeholder.textContent = 'Imagem indisponível';
+            frame.append(placeholder);
+          }, { once: true });
+          frame.append(image);
+          return;
+        }
+      } catch (error) {
+        console.error('URL de imagem inválida para o produto.', error);
+      }
+    }
+
+    const placeholder = document.createElement('span');
+    placeholder.className = 'product-placeholder';
+    placeholder.textContent = 'Maison Saint';
+    frame.append(placeholder);
+  }
+
+  function renderProducts() {
+    const searchTerm = productSearch.value.trim().toLocaleLowerCase('pt-BR');
+    const selectedCategory = categoryFilter.value;
+    const filtered = products.filter(product => {
+      const matchesName = String(product.nome).toLocaleLowerCase('pt-BR').includes(searchTerm);
+      const matchesCategory = !selectedCategory || String(product.id_categoria) === selectedCategory;
+      return matchesName && matchesCategory;
+    });
+
+    productGrid.replaceChildren();
+    if (filtered.length === 0) {
+      showCatalogMessage(products.length ? 'Nenhum produto corresponde aos filtros.' : 'Nenhum produto cadastrado ainda.', 'info');
+      return;
+    }
+
+    catalogStatus.hidden = true;
+    for (const product of filtered) {
+      const category = categories.find(item => Number(item.id_categoria) === Number(product.id_categoria));
+      const card = document.createElement('article');
+      card.className = 'product-card reveal';
+
+      const frame = document.createElement('div');
+      frame.className = 'product-frame';
+      const tag = document.createElement('span');
+      tag.className = 'tag';
+      tag.textContent = category?.nome || 'Coleção';
+      frame.append(tag);
+      addImageOrPlaceholder(frame, product);
+
+      const name = document.createElement('h3');
+      name.className = 'product-name';
+      name.textContent = product.nome;
+
+      const meta = document.createElement('div');
+      meta.className = 'product-meta';
+      const price = document.createElement('span');
+      price.className = 'product-price';
+      price.textContent = money(product.preco);
+      const size = document.createElement('span');
+      size.className = 'product-price';
+      size.textContent = `Tam. ${product.tamanho}`;
+      meta.append(price, size);
+
+      const details = document.createElement('p');
+      details.className = 'product-details';
+      details.textContent = `${product.material_sustentavel} · ${Number(product.estoque)} em estoque`;
+
+      const addButton = document.createElement('button');
+      addButton.type = 'button';
+      addButton.className = 'product-add';
+      addButton.textContent = Number(product.estoque) > 0 ? 'Adicionar à sacola' : 'Indisponível';
+      addButton.disabled = Number(product.estoque) <= 0;
+      addButton.addEventListener('click', () => addToCart(product));
+
+      card.append(frame, name, meta, details, addButton);
+      productGrid.append(card);
+      if (typeof io !== 'undefined') io.observe(card);
+    }
+  }
+
+  function renderCart() {
+    const quantity = cart.reduce((sum, item) => sum + item.quantidade, 0);
+    cartCount.textContent = String(quantity);
+    cartItems.replaceChildren();
+
+    if (cart.length === 0) {
+      const empty = document.createElement('p');
+      empty.className = 'cart-note';
+      empty.textContent = 'Sua sacola está vazia.';
+      cartItems.append(empty);
+    }
+
+    for (const item of cart) {
+      const row = document.createElement('div');
+      row.className = 'cart-line';
+      const description = document.createElement('div');
+      const name = document.createElement('div');
+      name.className = 'cart-line-name';
+      name.textContent = item.nome;
+      const meta = document.createElement('div');
+      meta.className = 'cart-line-meta';
+      meta.textContent = `${item.quantidade} × ${money(item.preco)}`;
+      description.append(name, meta);
+
+      const remove = document.createElement('button');
+      remove.type = 'button';
+      remove.textContent = 'Remover';
+      remove.setAttribute('aria-label', `Remover ${item.nome} da sacola`);
+      remove.addEventListener('click', () => {
+        cart = cart.filter(cartItem => cartItem.id_produto !== item.id_produto);
+        saveCart();
+      });
+      row.append(description, remove);
+      cartItems.append(row);
+    }
+
+    cartTotal.textContent = money(cart.reduce((sum, item) => sum + item.preco * item.quantidade, 0));
+  }
+
+  function saveCart() {
+    try {
+      localStorage.setItem(CART_KEY, JSON.stringify(cart));
+      renderCart();
+    } catch (error) {
+      console.error('Não foi possível salvar a sacola neste navegador.', error);
+      showCatalogMessage('Não foi possível salvar a sacola neste navegador.', 'error');
+    }
+  }
+
+  function addToCart(product) {
+    const existing = cart.find(item => item.id_produto === Number(product.id_produto));
+    if (existing && existing.quantidade >= Number(product.estoque)) {
+      showCatalogMessage('A quantidade solicitada já atingiu o estoque disponível.', 'error');
+      return;
+    }
+    if (existing) existing.quantidade += 1;
+    else cart.push({
+      id_produto: Number(product.id_produto),
+      nome: product.nome,
+      preco: Number(product.preco),
+      quantidade: 1
+    });
+    saveCart();
+  }
+
+  async function loadCatalog() {
+    showCatalogMessage('Carregando produtos...', 'info');
+    try {
+      const [productsResponse, categoriesResponse] = await Promise.all([
+        fetch('/produtos'),
+        fetch('/categorias')
+      ]);
+      if (!productsResponse.ok) throw new Error(`Falha ao carregar produtos (${productsResponse.status}).`);
+      if (!categoriesResponse.ok) throw new Error(`Falha ao carregar categorias (${categoriesResponse.status}).`);
+
+      const [productsData, categoriesData] = await Promise.all([
+        productsResponse.json(),
+        categoriesResponse.json()
+      ]);
+      if (!Array.isArray(productsData) || !Array.isArray(categoriesData)) {
+        throw new Error('A API retornou um formato inesperado para o catálogo.');
+      }
+
+      products = productsData;
+      categories = categoriesData;
+      for (const category of categories) {
+        const option = document.createElement('option');
+        option.value = String(category.id_categoria);
+        option.textContent = category.nome;
+        categoryFilter.append(option);
+      }
+      renderProducts();
+    } catch (error) {
+      console.error('Não foi possível carregar o catálogo.', error);
+      showCatalogMessage('Não foi possível carregar os produtos. Verifique a conexão com a API e tente recarregar a página.', 'error');
+    }
+  }
+
+  productSearch.addEventListener('input', renderProducts);
+  categoryFilter.addEventListener('change', renderProducts);
+  document.querySelector('.nav-cart').addEventListener('click', () => {
+    renderCart();
+    cartDialog.showModal();
+  });
+  document.querySelector('#cart-close').addEventListener('click', () => cartDialog.close());
+
+  renderCart();
+  loadCatalog();
+</script>
+</body>
+</html>

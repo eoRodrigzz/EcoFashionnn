@@ -1,6 +1,8 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import conexao from "./db.js";
 
 import { tratarErro } from "./src/middlewares/tratarErro.js";
@@ -15,11 +17,13 @@ import notasFiscaisRoutes from "./src/routes/notasFiscaisRoutes.js";
 
 const app = express();
 const PORTA = Number(process.env.PORTA || 3000);
+const diretorioProjeto = dirname(fileURLToPath(import.meta.url));
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(join(diretorioProjeto, "Front-End")));
 
-app.get("/", (req, res) => {
+app.get("/api/health", (req, res) => {
     res.status(200).json({ mensagem: "API EcoFashion funcionando" });
 });
 
