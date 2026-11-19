@@ -1,11 +1,11 @@
 {
   "name": "ecofashion",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "\"# EcoFashionn\"",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +16,16 @@
     "dotenv": "^18.0.10",
     "express": "^5.3.0",
     "mysql2": "^3.24.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zabelladinizz/EcoFashionn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zabelladinizz/EcoFashionn/issues"
+  },
+  "homepage": "https://github.com/zabelladinizz/EcoFashionn#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }
