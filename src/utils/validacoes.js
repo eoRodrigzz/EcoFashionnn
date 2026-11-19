@@ -16,5 +16,6 @@ export function precoValido(valor){
     return typeof valor === "number"
     && Number.isFinite(valor)
     && valor >= 0
-    && valor <= 999999.99;
+    && valor <= 99999999.99
+    && Math.abs(valor * 100 - Math.round(valor * 100)) < 1e-8;
 }
