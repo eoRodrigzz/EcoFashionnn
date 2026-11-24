@@ -1,7 +1,8 @@
 import * as usuariosModel from "../models/usuariosModel.js";
+import { criarHashSenha } from "../utils/senhas.js";
 
 export function listar(req, res, next) {
-    usuariosModel.listar((erro, resultado) => {
+    usuariosModel.buscarPorId(req.sessao.idUsuario, (erro, resultado) => {
         if (erro) return next(erro);
         return res.status(200).json(resultado);
     });
@@ -17,26 +18,33 @@ export function buscarPorId(req, res, next) {
     });
 }
 
-export function criar(req, res, next) {
-    usuariosModel.criar(req.dados, (erro, resultado) => {
-        if (erro) return next(erro);
-        return res.status(201).json({
-            mensagem: "Usuário cadastrado com sucesso",
-            id: resultado.insertId
+export async function criar(req, res, next) {
+    try {
+        const senha = await criarHashSenha(req.dados.senha);
+        usuariosModel.criar({ ...req.dados, senha }, (erro, resultado) => {
+            if (erro) return next(erro);
+            return res.status(201).json({
+                mensagem: "Usuário cadastrado com sucesso",
+                id: resultado.insertId
+            });
         });
-    });
+    } catch (erro) {
+        return next(erro);
+    }
 }
 
-export function atualizar(req, res, next) {
+export async function atualizar(req, res, next) {
     usuariosModel.buscarPorId(req.id, (erro, registros) => {
         if (erro) return next(erro);
         if (registros.length === 0) {
             return res.status(404).json({ erro: "Usuário não encontrado" });
         }
-        usuariosModel.atualizar(req.id, req.dados, (erro) => {
-            if (erro) return next(erro);
-            return res.status(200).json({ mensagem: "Usuário atualizado com sucesso" });
-        });
+        criarHashSenha(req.dados.senha).then((senha) => {
+            usuariosModel.atualizar(req.id, { ...req.dados, senha }, (erroAoAtualizar) => {
+                if (erroAoAtualizar) return next(erroAoAtualizar);
+                return res.status(200).json({ mensagem: "Usuário atualizado com sucesso" });
+            });
+        }).catch(next);
     });
 }
 

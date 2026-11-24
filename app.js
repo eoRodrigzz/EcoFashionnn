@@ -14,6 +14,7 @@ import itensCarrinhoRoutes from "./src/routes/itensCarrinhoRoutes.js";
 import vendasRoutes from "./src/routes/vendasRoutes.js";
 import itensVendaRoutes from "./src/routes/itensVendaRoutes.js";
 import notasFiscaisRoutes from "./src/routes/notasFiscaisRoutes.js";
+import autenticacaoRoutes from "./src/routes/autenticacaoRoutes.js";
 
 const app = express();
 const PORTA = Number(process.env.PORTA || 3000);
@@ -27,6 +28,7 @@ app.get("/api/health", (req, res) => {
     res.status(200).json({ mensagem: "API EcoFashion funcionando" });
 });
 
+app.use("/auth", autenticacaoRoutes);
 app.use("/categorias", categoriasRoutes);
 app.use("/produtos", produtosRoutes);
 app.use("/usuarios", usuariosRoutes);

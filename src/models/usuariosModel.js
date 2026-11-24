@@ -10,6 +10,11 @@ export function buscarPorId(id, callback) {
     conexao.query(sql, [id], callback);
 }
 
+export function buscarPorEmail(email, callback) {
+    const sql = "SELECT id_usuario, nome, email, senha, criado_em FROM usuario WHERE email = ?";
+    conexao.query(sql, [email], callback);
+}
+
 export function criar(dados, callback) {
     const sql = "INSERT INTO usuario (nome, email, senha, cpf, endereco) VALUES (?, ?, ?, ?, ?)";
     conexao.query(sql, [
@@ -19,6 +24,11 @@ export function criar(dados, callback) {
         dados.cpf,
         dados.endereco
     ], callback);
+}
+
+export function atualizarSenha(id, senha, callback) {
+    const sql = "UPDATE usuario SET senha = ? WHERE id_usuario = ?";
+    conexao.query(sql, [senha, id], callback);
 }
 
 export function atualizar(id, dados, callback) {
